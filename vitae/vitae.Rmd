@@ -1,0 +1,68 @@
+---
+title: CV
+name: Sara  
+surname: Acevedo
+position: "Estudiante Doctorado Cs. de la Ingeniería"
+address: "Santiago, Chile"
+phone: +56 9 576 50 773
+www: saryace.github.io
+email: "seaceved@uc.cl"
+twitter: saryace
+github: Saryace
+linkedin: s-acevedo-25360724
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: ""
+output: 
+  vitae::markdowncv:
+    theme: kjhealy
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+## Acerca de mí
+
+ * Experiencia en visualización y análisis de datos.
+ * Desarrollo de modelos predictivos para datos medioambientales usando R.
+ * Parte de la iniciativa global [Rladies.](http://www.rladies.org)
+
+## Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution,
+  "Doctorado Cs. de la Ingeniería", "2016 -", "Pontificia Universidad Católica de Chile",
+  "Master of Science", "2012 - 2014", "University of California, Davis",
+  "Químico", "2004 - 2009", "Pontificia Universidad Católica de Chile",
+) %>% 
+  brief_entries(Degree, Year, Institution)
+```
+
+## Experiencia Laboral
+
+```{r}
+tribble(
+  ~Year, ~Desc, ~Where,
+  "2020 - ", "Evaluación MOOC: Introducción a la programación" , "Pontificia Universidad Católica de Chile",
+  "2012 - 2019", "Evaluación de proyectos y campañas de terreno" , "Freelance"
+) %>% 
+  brief_entries(
+    Desc,
+    Year,
+    Where
+  )
+```
+## Repositorios y actividades
+ * [30 Days Chart Challenge 2021](https://github.com/Saryace/justfigures) 
+ * [Taller introducción a Tidymodels](https://vimeo.com/525178849)
+ * [Taller introducción al procesamiento y visualización de datos con R](https://vimeo.com/418285071)
+ * [Presentaciones en congresos internacionales](https://saryace.github.io/talks/)
+
+## Extras
+ * Inglés avanzado
+ * Curso Machine Learning - Estación Lastarria
+ * Curriculum extendido en [saryace.github.io](https://saryace.github.io/)
+
